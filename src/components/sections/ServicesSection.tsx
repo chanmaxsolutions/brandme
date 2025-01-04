@@ -22,7 +22,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, ind
             className="group bg-white rounded-xl p-8 md:p-12 border border-gray-100 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 cursor-pointer relative"
         >
             <div className="flex flex-col gap-6 md:gap-8">
-                <div className="rounded-2xl bg-primary/5 p-4 text-primary w-fit">
+                <div className="rounded-2xl bg-secondary/10 p-4 text-secondary w-fit">
                     {icon}
                 </div>
 
