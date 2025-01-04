@@ -22,7 +22,7 @@ const testimonials: TestimonialProps[] = [
         name: "Michael Chen",
         role: "CEO",
         company: "Startup Hub",
-        text: "The team at BrandMe doesn't just deliver services; they deliver results. Our online presence has grown exponentially since we started working with them."
+        text: "The team at BrandMe doesnt just deliver services; they deliver results. Our online presence has grown exponentially since we started working with them."
     },
     {
         name: "Emma Davis",
