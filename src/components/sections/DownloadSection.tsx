@@ -121,7 +121,7 @@ const DownloadSection: React.FC = () => {
     };
 
     return (
-        <section className="bg-primary">
+        <section className="bg-black">
             <div className="container mx-auto">
                 <div className="grid md:grid-cols-2 min-h-[300px]">
                     {/* Left Column - Big Text */}
@@ -141,7 +141,7 @@ const DownloadSection: React.FC = () => {
                     <div className="pb-8 md:p-12 flex items-center justify-center">
                         <button
                             onClick={() => setIsModalOpen(true)}
-                            className="bg-secondary text-white px-8 py-4 rounded-full hover:opacity-90 transition-all duration-300 flex items-center gap-2 text-lg"
+                            className="bg-white text-black px-8 py-4 rounded-full hover:opacity-90 transition-all duration-300 flex items-center gap-2 text-lg"
                         >
 
                             Download Free Checklist
