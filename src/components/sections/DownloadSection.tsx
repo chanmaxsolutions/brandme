@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Download, X } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface FormData {
     name: string;
@@ -39,9 +40,19 @@ const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose, onSubmit
     if (!isOpen) return null;
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-50 flex items-center justify-center"
+        >
             <div className="absolute inset-0 bg-black/50" onClick={onClose} />
-            <div className="relative bg-white rounded-2xl p-8 w-full max-w-md mx-4">
+            <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.2 }}
+                className="relative bg-white rounded-2xl p-8 w-full max-w-md mx-4"
+            >
                 <button
                     onClick={onClose}
                     className="absolute right-4 top-4 text-gray-500 hover:text-gray-700"
@@ -73,7 +84,7 @@ const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose, onSubmit
                     </div>
 
                     <div>
-                        <label htmlFor="email" className="block  text-gray-700 mb-1">
+                        <label htmlFor="email" className="block text-gray-700 mb-1">
                             Email Address
                         </label>
                         <input
@@ -87,7 +98,7 @@ const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose, onSubmit
                     </div>
 
                     <div>
-                        <label htmlFor="phone" className="block  text-gray-700 mb-1">
+                        <label htmlFor="phone" className="block text-gray-700 mb-1">
                             Phone Number
                         </label>
                         <input
@@ -108,8 +119,8 @@ const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose, onSubmit
                         Download Now
                     </button>
                 </form>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 };
 
@@ -126,26 +137,38 @@ const DownloadSection: React.FC = () => {
                 <div className="grid md:grid-cols-2 min-h-[300px]">
                     {/* Left Column - Big Text */}
                     <div className="p-8 md:p-12 flex items-center">
-                        <div className='text-center md:text-left'>
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.1 }}
+                            className='text-center md:text-left'
+                        >
                             <h2 className="text-5xl md:text-4xl lg:text-6xl font-semibold tracking-tighter text-white mb-6">
                                 Free Social Media Marketing Guide
                             </h2>
 
-                            <p className="text-xl md:text-2xl text-white/80 font-light tracking-tighter">
+                            <motion.p
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.05, duration: 0.1 }}
+                                className="text-xl md:text-2xl text-white/80 font-light tracking-tighter"
+                            >
                                 Discover the secrets to mastering your social media presence
-                            </p>
-                        </div>
+                            </motion.p>
+                        </motion.div>
                     </div>
 
                     {/* Right Column - CTA Button */}
                     <div className="pb-8 md:p-12 flex items-center justify-center">
-                        <button
+                        <motion.button
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.1, duration: 0.1 }}
                             onClick={() => setIsModalOpen(true)}
                             className="bg-white text-secondary px-8 py-4 rounded-full hover:opacity-90 transition-all duration-300 flex items-center gap-2 text-lg"
                         >
-
                             Download Free Checklist
-                        </button>
+                        </motion.button>
                     </div>
                 </div>
             </div>
