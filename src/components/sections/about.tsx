@@ -20,7 +20,7 @@ const About = () => {
                             We Create <br />
                             Digital Impact
                         </h2>
-                        <p className="text-lg md:text-xl text-white/80 mb-8">
+                        <p className="text-lg md:text-xl text-white/80 mb-8 font-light">
                             At BrandMe, we transform ideas into powerful digital experiences.
                             Our passion for innovation drives us to create solutions that make
                             a lasting impact for our clients.
