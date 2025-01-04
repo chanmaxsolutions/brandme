@@ -41,12 +41,16 @@ const HeroSection = () => {
                         transition={{ delay: 0.1, duration: 0.1 }}
                         className="flex flex-col sm:flex-row justify-center gap-4"
                     >
-                        <button className="inline-flex items-center justify-center px-8 py-3 text-lg text-white bg-primary rounded-full hover:opacity-90 transition-all duration-300">
-                            Get A Quote
-                        </button>
-                        <button className="inline-flex items-center justify-center px-8 py-3 text-lg text-primary border-2 border-primary rounded-full hover:bg-secondary hover:text-white transition-all duration-300">
-                            Our Services
-                        </button>
+                        <Link href="/contact">
+                            <button className="inline-flex items-center justify-center px-8 py-3 text-lg text-white bg-primary rounded-full hover:opacity-90 transition-all duration-300">
+                                Get A Quote
+                            </button>
+                        </Link>
+                        <Link href="/services">
+                            <button className="inline-flex items-center justify-center px-8 py-3 text-lg text-primary border-2 border-primary rounded-full hover:bg-secondary hover:text-white transition-all duration-300">
+                                Our Services
+                            </button>
+                        </Link>
                     </motion.div>
                 </motion.div>
             </div>
