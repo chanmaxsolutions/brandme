@@ -59,7 +59,7 @@ const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose, onSubmit
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                        <label htmlFor="name" className="block text-gray-700 mb-1">
                             Full Name
                         </label>
                         <input
@@ -73,7 +73,7 @@ const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose, onSubmit
                     </div>
 
                     <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                        <label htmlFor="email" className="block  text-gray-700 mb-1">
                             Email Address
                         </label>
                         <input
@@ -87,7 +87,7 @@ const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose, onSubmit
                     </div>
 
                     <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                        <label htmlFor="phone" className="block  text-gray-700 mb-1">
                             Phone Number
                         </label>
                         <input
@@ -102,7 +102,7 @@ const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose, onSubmit
 
                     <button
                         type="submit"
-                        className="w-full bg-primary text-white py-3 rounded-full hover:opacity-90 transition-all duration-300 flex items-center justify-center gap-2"
+                        className="w-full bg-primary text-white py-4 rounded-full hover:opacity-90 transition-all duration-300 flex items-center justify-center gap-2"
                     >
                         <Download className="h-5 w-5" />
                         Download Now
@@ -121,13 +121,13 @@ const DownloadSection: React.FC = () => {
     };
 
     return (
-        <section className="bg-black">
+        <section className="bg-secondary">
             <div className="container mx-auto">
                 <div className="grid md:grid-cols-2 min-h-[300px]">
                     {/* Left Column - Big Text */}
                     <div className="p-8 md:p-12 flex items-center">
                         <div className='text-center md:text-left'>
-                            <h2 className="text-4xl md:text-4xl lg:text-6xl font-semibold tracking-tighter text-white mb-6">
+                            <h2 className="text-5xl md:text-4xl lg:text-6xl font-semibold tracking-tighter text-white mb-6">
                                 Free Social Media Marketing Guide
                             </h2>
 
@@ -141,7 +141,7 @@ const DownloadSection: React.FC = () => {
                     <div className="pb-8 md:p-12 flex items-center justify-center">
                         <button
                             onClick={() => setIsModalOpen(true)}
-                            className="bg-white text-black px-8 py-4 rounded-full hover:opacity-90 transition-all duration-300 flex items-center gap-2 text-lg"
+                            className="bg-white text-secondary px-8 py-4 rounded-full hover:opacity-90 transition-all duration-300 flex items-center gap-2 text-lg"
                         >
 
                             Download Free Checklist
