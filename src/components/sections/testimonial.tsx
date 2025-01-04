@@ -22,7 +22,7 @@ const testimonials: TestimonialProps[] = [
         name: "Michael Chen",
         role: "CEO",
         company: "Startup Hub",
-        text: "The team at BrandMe doesnt just deliver services; they deliver results. Our online presence has grown exponentially since we started working with them."
+        text: "The team at BrandMe doesn't just deliver services; they deliver results. Our online presence has grown exponentially since we started working with them."
     },
     {
         name: "Emma Davis",
@@ -113,7 +113,7 @@ const TestimonialSection = () => {
                         <div className="flex flex-col items-center text-center">
                             {/* Testimonial Text */}
                             <p className="text-2xl md:text-4xl text-gray-700 mb-8 font-light tracking-tighter">
-                                "{testimonials[currentIndex].text}"
+                                &ldquo;{testimonials[currentIndex].text}&rdquo;
                             </p>
 
                             {/* Client Details */}
