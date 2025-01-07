@@ -25,18 +25,16 @@ const About = () => {
                             Our passion for innovation drives us to create solutions that make
                             a lasting impact for our clients.
                         </p>
-                        <button className="rounded-full  bg-secondary text-primary px-8 py-3 text-lg hover:opacity-90 transition-all duration-300">
-                            Get To Know Us
-                        </button>
+
                     </div>
 
                     {/* Right Column - Stats */}
                     <div className="grid grid-cols-2 gap-8">
                         {[
-                            { number: "10+", label: "Years Experience" },
-                            { number: "200+", label: "Projects Delivered" },
-                            { number: "95%", label: "Client Satisfaction" },
-                            { number: "50+", label: "Team Members" }
+                            { number: "02+", label: "Years Experience" },
+                            { number: "30+", label: "Projects Delivered" },
+                            { number: "99%", label: "Client Satisfaction" },
+                            { number: "20+", label: "Clients Globally" }
                         ].map((stat, index) => (
                             <div key={index} className="text-center">
                                 <h3 className="text-5xl md:text-7xl font-bold text-secondary mb-2">
