@@ -9,7 +9,6 @@ export default function ServicesPage() {
         <>
             <PageHeader
                 title="Our Services"
-                subtitle="What We Offer"
                 description="Professional digital marketing services to help grow your business online."
             />
             <CTASection />
