@@ -36,7 +36,7 @@ const Navigation = () => {
     ];
 
     return (
-        <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm' : ''
+        <header className={`fixed w-full z-50 transition-all bg-white duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm' : ''
             }`}>
             <nav className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
                 {/* Rest of your navigation code remains exactly the same */}
@@ -44,7 +44,7 @@ const Navigation = () => {
                     {/* Logo */}
                     <Link href="/" className="relative h-10 w-44">
                         <Image
-                            src="https://res.cloudinary.com/db8phlsfy/image/upload/v1735983694/Brandme_mhivtu.svg"
+                            src="https://res.cloudinary.com/db8phlsfy/image/upload/v1736069770/logo_lrs2c8.svg"
                             alt="Brandme Logo"
                             fill
                             style={{ objectFit: 'contain' }}
@@ -56,13 +56,13 @@ const Navigation = () => {
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-8">
                         {/* Regular Nav Links */}
-                        <Link href="/" className="text-gray-800 hover:text-primary transition-colors duration-300 text-lg">
+                        <Link href="/" className="text-secondary hover:text-primary transition-colors duration-300 text-lg">
                             Home
                         </Link>
 
                         {/* Services Dropdown */}
                         <div className="relative group">
-                            <button className="text-gray-800 hover:text-primary transition-colors duration-300 text-lg flex items-center gap-1">
+                            <button className="text-secondary hover:text-primary transition-colors duration-300 text-lg flex items-center gap-1">
                                 Services
                                 <ChevronDown className="w-4 h-4" />
                             </button>
@@ -73,7 +73,7 @@ const Navigation = () => {
                                     <Link
                                         key={service.label}
                                         href={service.href}
-                                        className="block px-4 py-3 text-gray-800 hover:text-primary hover:bg-slate-50 transition-colors duration-300"
+                                        className="block px-4 py-3 text-secondary  hover:text-primary hover:bg-slate-50 transition-colors duration-300"
                                     >
                                         {service.label}
                                     </Link>
@@ -82,17 +82,17 @@ const Navigation = () => {
                         </div>
 
                         {/* Other Nav Links */}
-                        <Link href="/about" className="text-gray-800 hover:text-primary transition-colors duration-300 text-lg">
+                        <Link href="/about" className="text-secondary hover:text-primary transition-colors duration-300 text-lg">
                             About
                         </Link>
-                        <Link href="/contact" className="text-gray-800 hover:text-primary transition-colors duration-300 text-lg">
+                        <Link href="/contact" className="text-secondary hover:text-primary transition-colors duration-300 text-lg">
                             Contact
                         </Link>
 
                         {/* Get Started Button */}
                         <Link
                             href="/get-quote"
-                            className="bg-primary text-white px-8 py-3 rounded-full hover:opacity-90 transition-colors duration-300 text-lg"
+                            className="bg-primary text-secondary px-8 py-3 rounded-full hover:opacity-90 transition-colors duration-300 text-lg"
                         >
                             Get Started
                         </Link>

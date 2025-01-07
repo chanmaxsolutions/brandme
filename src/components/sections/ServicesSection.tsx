@@ -19,19 +19,19 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, ind
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.1, delay: index * 0.1 }}
-            className="group bg-white rounded-xl p-8 md:p-12 border border-gray-100 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 cursor-pointer relative"
+            className="group bg-primary/5 rounded-xl p-8 md:p-12 border border-secondary/10  hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 cursor-pointer relative"
         >
             <div className="flex flex-col gap-6 md:gap-8">
-                <div className="rounded-2xl bg-secondary/10 p-4 text-secondary w-fit">
+                <div className="rounded-2xl bg-primary p-4 text-secondary w-fit">
                     {icon}
                 </div>
 
                 <div>
-                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tighter text-primary mb-4">
+                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tighter text-secondary mb-4">
                         {title}
                     </h3>
 
-                    <p className="text-lg md:text-xl text-gray-400 font-light">
+                    <p className="text-xl text-gray-600 font-light max-w-3xl">
                         {description}
                     </p>
                 </div>
@@ -79,16 +79,22 @@ const ServicesSection: React.FC = () => {
                 {/* Clean Section Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.1 }}
-                    className="max-w-3xl mx-auto text-center mb-12 md:mb-20"
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="text-center mb-20"
                 >
-                    <h2 className="text-4xl md:text-5xl lg:text-7xl font-semibold tracking-tighter text-secondary mb-6 md:mb-8">
-                        Our Services
+                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-primary tracking-tighter">
+                        For Growth
                     </h2>
-                    <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4">
-                        We help brands establish a strong digital presence through our comprehensive suite of services.
-                    </p>
+                    <div className="space-y-6">
+                        <p className="text-3xl text-secondary font-light tracking-tight">
+                            Strategic Solutions That Deliver
+                        </p>
+                        <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto">
+                            From social media management to custom web solutions, we provide the tools and expertise you need to thrive in today's digital landscape and connect with your audience effectively.
+                        </p>
+                    </div>
                 </motion.div>
 
                 {/* Services Grid */}

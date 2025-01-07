@@ -51,18 +51,26 @@ const TestimonialSection = () => {
         <section className="py-20 md:py-32 bg-white">
             <div className="container max-w-5xl mx-auto px-4">
                 {/* Section Header */}
+
+
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.1 }}
-                    className="max-w-3xl mx-auto text-center mb-16 md:mb-24"
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="text-center mb-20"
                 >
-                    <h2 className="text-4xl md:text-5xl lg:text-7xl font-semibold tracking-tighter text-secondary mb-6">
-                        Client Stories
+                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-primary tracking-tighter">
+                        Success Stories
                     </h2>
-                    <p className="text-lg md:text-xl text-gray-600">
-                        Hear what our clients have to say about their experience working with us.
-                    </p>
+                    <div className="space-y-6">
+                        <p className="text-3xl text-secondary font-light tracking-tight">
+                            Real Results, Real Impact
+                        </p>
+                        <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto">
+                            See how we've helped businesses like yours transform their digital presence and achieve measurable growth through strategic social media solutions.
+                        </p>
+                    </div>
                 </motion.div>
 
                 {/* Testimonial Slider */}
@@ -108,7 +116,7 @@ const TestimonialSection = () => {
                         key={currentIndex}
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
-                        className="bg-white rounded-2xl p-8 md:p-12 border border-gray-100"
+                        className="bg-primary/5 rounded-2xl p-8 md:p-12  border border-secondary/10"
                     >
                         <div className="flex flex-col items-center text-center">
                             {/* Testimonial Text */}
@@ -117,7 +125,7 @@ const TestimonialSection = () => {
                             </p>
 
                             {/* Client Details */}
-                            <h4 className="text-2xl md:text-3xl font-semibold text-primary mb-2">
+                            <h4 className="text-2xl md:text-3xl font-semibold text-secondary mb-2">
                                 {testimonials[currentIndex].name}
                             </h4>
                             <p className="text-xl text-gray-500 font-light">

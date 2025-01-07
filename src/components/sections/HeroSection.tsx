@@ -7,8 +7,7 @@ import Link from 'next/link';
 const HeroSection = () => {
     return (
         <section className="relative min-h-screen flex items-center justify-center bg-white">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 bg-gradient-to-br from-pink-50 to-purple-50 opacity-50" />
+
 
             <div className="relative container mx-auto px-4">
                 <motion.div
@@ -19,9 +18,9 @@ const HeroSection = () => {
                 >
                     {/* Main Heading */}
                     <h1 className="text-6xl md:text-7xl lg:text-9xl font-semibold mb-6 tracking-tighter">
-                        <span className="text-primary">Social</span>
+                        <span className="text-secondary">The <span className='font-serif text-primary italic'>Social</span></span>
                         <br />
-                        <span className="text-secondary">Business</span>
+                        <span className="text-secondary">Company</span>
                     </h1>
 
                     {/* Subheading */}
@@ -42,12 +41,12 @@ const HeroSection = () => {
                         className="flex flex-col sm:flex-row justify-center gap-4"
                     >
                         <Link href="/contact">
-                            <button className="inline-flex items-center justify-center px-8 py-3 text-lg text-white bg-primary rounded-full hover:opacity-90 transition-all duration-300">
+                            <button className="inline-flex items-center justify-center px-12 py-4 text-lg text-secondary bg-primary border-2 border-primary rounded-full hover:opacity-90 transition-all duration-300">
                                 Get A Quote
                             </button>
                         </Link>
                         <Link href="/services">
-                            <button className="inline-flex items-center justify-center px-8 py-3 text-lg text-primary border-2 border-primary rounded-full hover:bg-secondary hover:text-white transition-all duration-300">
+                            <button className="inline-flex items-center justify-center px-12 py-4 text-lg text-secondary border-2 border-primary rounded-full hover:bg-secondary hover:text-white transition-all duration-300">
                                 Our Services
                             </button>
                         </Link>

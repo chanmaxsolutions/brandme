@@ -51,20 +51,20 @@ const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose, onSubmit
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.2 }}
-                className="relative bg-white rounded-2xl p-8 w-full max-w-md mx-4"
+                className="relative bg-white rounded-2xl p-8 w-full max-w-xl mx-4"
             >
                 <button
                     onClick={onClose}
                     className="absolute right-4 top-4 text-gray-500 hover:text-gray-700"
                 >
-                    <X className="h-6 w-6" />
+                    <X className="h-8 w-8" />
                 </button>
 
-                <h3 className="text-2xl font-semibold tracking-tighter text-gray-900 mb-4">
-                    Download Your Free Checklist
+                <h3 className="text-3xl md:text-6xl font-semibold text-center md:px-12 tracking-tighter text-gray-900 mb-4">
+                    Download Your <span className='underline underline-offset-3 decoration-primary decoration-6 rounded-lg'>Free</span> Checklist
                 </h3>
 
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 text-center text-xl font-light mb-6">
                     Fill in your details to receive your social media checklist.
                 </p>
 
@@ -111,13 +111,15 @@ const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose, onSubmit
                         />
                     </div>
 
-                    <button
-                        type="submit"
-                        className="w-full bg-primary text-white py-4 rounded-full hover:opacity-90 transition-all duration-300 flex items-center justify-center gap-2"
-                    >
-                        <Download className="h-5 w-5" />
-                        Download Now
-                    </button>
+                    <div className='flex items-center justify-center'>
+                        <button
+                            type="submit"
+                            className=" bg-primary text-secondary text-xl py-4 px-12 rounded-full hover:opacity-90 transition-all duration-300 flex items-center justify-center gap-2"
+                        >
+
+                            Download Now
+                        </button>
+                    </div>
                 </form>
             </motion.div>
         </motion.div>
@@ -143,7 +145,7 @@ const DownloadSection: React.FC = () => {
                             transition={{ duration: 0.1 }}
                             className='text-center md:text-left'
                         >
-                            <h2 className="text-5xl md:text-4xl lg:text-6xl font-semibold tracking-tighter text-white mb-6">
+                            <h2 className="text-5xl md:text-4xl lg:text-6xl font-semibold tracking-tighter text-primary mb-6">
                                 Free Social Media Marketing Guide
                             </h2>
 
@@ -165,7 +167,7 @@ const DownloadSection: React.FC = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1, duration: 0.1 }}
                             onClick={() => setIsModalOpen(true)}
-                            className="bg-white text-secondary px-8 py-4 rounded-full hover:opacity-90 transition-all duration-300 flex items-center gap-2 text-lg"
+                            className="bg-primary text-secondary px-8 py-4 rounded-full hover:opacity-90 transition-all duration-300 flex items-center gap-2 text-lg"
                         >
                             Download Free Checklist
                         </motion.button>
