@@ -41,3 +41,17 @@ export const LinkedInMasterClassFormSchema = z.object({
 });
 
 export type LinkedInMasterClassFormData = z.infer<typeof LinkedInMasterClassFormSchema>;
+
+// src/lib/airtable.ts
+export const QuoteFormSchema = z.object({
+    name: z.string().min(2, 'Name is required'),
+    email: z.string().email('Invalid email address'),
+    countryCode: z.string().min(1, 'Country code is required'),
+    phoneNumber: z.string().min(1, 'Phone number is required'),
+    companyName: z.string().min(2, 'Company name is required'),
+    services: z.array(z.string()).min(1, 'Please select at least one service'),
+    budget: z.string().min(1, 'Please select your budget range'),
+    projectDetails: z.string().min(10, 'Please provide some project details'),
+});
+
+export type QuoteFormData = z.infer<typeof QuoteFormSchema>;

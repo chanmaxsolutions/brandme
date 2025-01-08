@@ -57,6 +57,7 @@ const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose }) => {
             link.click();
             document.body.removeChild(link);
 
+
             onClose();
         } catch (error) {
             setSubmitError(error instanceof Error ? error.message : 'Something went wrong');
@@ -79,7 +80,7 @@ const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose }) => {
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.2 }}
-                className="relative bg-white rounded-2xl p-8 w-full max-w-xl mx-4"
+                className="relative bg-white rounded-2xl p-8 w-full max-w-2xl mx-4"
             >
                 <button
                     onClick={onClose}
@@ -88,7 +89,7 @@ const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose }) => {
                     <X className="h-8 w-8" />
                 </button>
 
-                <h3 className="text-3xl md:text-6xl font-semibold text-center md:px-12 tracking-tighter text-secondary mb-4">
+                <h3 className="text-3xl md:text-6xl font-semibold text-center md:px-14 tracking-tighter text-secondary mb-4">
                     Download Your <span className='text-primary'>Free</span> Checklist
                 </h3>
 
