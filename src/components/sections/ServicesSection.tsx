@@ -19,10 +19,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, ind
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.1, delay: index * 0.1 }}
-            className="group bg-primary/5 rounded-xl p-8 md:p-12 border border-secondary/10  hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 cursor-pointer relative"
+            className="group bg-white rounded-xl p-8  border border-secondary/5  hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 cursor-pointer relative"
         >
             <div className="flex flex-col gap-6 md:gap-8">
-                <div className="rounded-2xl bg-primary p-4 text-secondary w-fit">
+                <div className="rounded-2xl bg-primary/10 p-4 text-primary w-fit">
                     {icon}
                 </div>
 
@@ -49,13 +49,13 @@ const ServicesSection: React.FC = () => {
     const services = [
         {
             title: "Social Media Management",
-            description: "Expert management of your social media accounts that drives real engagement",
+            description: "Expert management of your social media accounts that drives real engagement.",
             icon: <Instagram className="w-6 h-6 md:w-8 md:h-8" />,
             href: "/services/social-media-management"
         },
         {
             title: "Social Media Marketing",
-            description: "Strategic campaigns that reach your target audience and drive measurable business results.",
+            description: "Strategic campaigns that reach your target audience and drive measurable results.",
             icon: <BarChart3 className="w-6 h-6 md:w-8 md:h-8" />,
             href: "/services/social-media-marketing"
         },
@@ -67,7 +67,7 @@ const ServicesSection: React.FC = () => {
         },
         {
             title: "LinkedIn Growth Masterclass",
-            description: "Transform your professional network and leverage LinkedIn for business networking and growth.",
+            description: "Transform your professional network and leverage LinkedIn for networking and growth.",
             icon: <Linkedin className="w-6 h-6 md:w-8 md:h-8" />,
             href: "/services/linkedin-masterclass"
         }
@@ -75,7 +75,7 @@ const ServicesSection: React.FC = () => {
 
     return (
         <section className="py-20 md:py-32">
-            <div className="container max-w-6xl mx-auto px-4">
+            <div className="container max-w-5xl mx-auto px-4">
                 {/* Clean Section Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -85,7 +85,7 @@ const ServicesSection: React.FC = () => {
                     className="text-center mb-20"
                 >
                     <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-primary tracking-tighter">
-                        For Growth
+                        Our Services
                     </h2>
                     <div className="space-y-6">
                         <p className="text-3xl text-secondary font-light tracking-tight">

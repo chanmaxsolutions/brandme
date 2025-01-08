@@ -10,7 +10,7 @@ const ThankYouPage = () => {
     return (
         <main className="min-h-screen bg-white py-40">
             <div className="container mx-auto px-4">
-                <div className="max-w-3xl mx-auto">
+                <div className="max-w-2xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -19,9 +19,9 @@ const ThankYouPage = () => {
                     >
                         {/* Success Message */}
                         <div className="space-y-6">
-                            <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto">
+                            <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto">
                                 <svg
-                                    className="w-10 h-10 text-secondary"
+                                    className="w-10 h-10 text-primary"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
@@ -45,9 +45,9 @@ const ThankYouPage = () => {
                         </div>
 
                         {/* What's Next Section */}
-                        <div className="bg-gray-50 rounded-2xl p-8 text-left space-y-6">
+                        <div className="bg-gray-50 rounded-2xl border border-gray-100 p-8 text-left space-y-6">
                             <h2 className="text-2xl font-semibold text-secondary">What's Next?</h2>
-
+                            <div className='border-t  border-gray-100'></div>
                             <div className="space-y-4">
                                 <div className="flex items-start gap-4">
                                     <div className="flex-shrink-0">

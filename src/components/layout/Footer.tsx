@@ -57,7 +57,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Link href="/services/linkedin-masterclass" className="text-secondary hover:text-secondary/80 transition-colors">
-                                    LinkedIn Growth Masterclass
+                                    LinkedIn Masterclass
                                 </Link>
                             </li>
                         </ul>
@@ -91,22 +91,22 @@ const Footer = () => {
                         <ul className="space-y-4">
                             <li className="flex items-center gap-3 text-secondary">
                                 <Mail className="w-5 h-5" />
-                                <a href="mailto:hello@brandme.com" className="hover:text-secondary/80 transition-colors">
-                                    hello@brandme.com
+                                <a href="mailto:hello@brandme.top" className="hover:text-secondary/80 transition-colors">
+                                    hello@brandme.top
                                 </a>
                             </li>
                             <li className="flex items-center gap-3 text-secondary">
                                 <Phone className="w-5 h-5" />
                                 <a href="tel:+1234567890" className="hover:text-secondary/80 transition-colors">
-                                    +1 (234) 567-890
+                                    +94 75 418 0422
                                 </a>
                             </li>
                             <li className="flex items-start gap-3 text-secondary">
                                 <MapPin className="w-5 h-5 mt-1" />
                                 <p>
-                                    123 Business Street,
+                                    Karanavai, Jaffna,
                                     <br />
-                                    City, State 12345
+                                    Sri Lanka
                                 </p>
                             </li>
                         </ul>

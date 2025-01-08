@@ -79,7 +79,7 @@ const CourseCurriculum = () => {
                             >
                                 <div className="md:flex items-start justify-between gap-12">
                                     <div className="mb-8 md:mb-0 md:w-1/3">
-                                        <h3 className="text-4xl md:text-5xl font-semibold text-white tracking-tighter">
+                                        <h3 className="text-4xl md:text-5xl font-semibold text-primary tracking-tighter">
                                             {detail.title}
                                         </h3>
                                     </div>

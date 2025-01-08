@@ -76,24 +76,24 @@ const ContactSection = () => {
                         className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20"
                     >
                         <div className="text-center">
-                            <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
-                                <Mail className="w-8 h-8 text-secondary" />
+                            <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                <Mail className="w-8 h-8 text-primary" />
                             </div>
                             <h3 className="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>
                             <p className="text-lg text-gray-600 font-light">hello@brandme.top</p>
                         </div>
 
                         <div className="text-center">
-                            <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
-                                <Phone className="w-8 h-8 text-secondary" />
+                            <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                <Phone className="w-8 h-8 text-primary" />
                             </div>
                             <h3 className="text-xl font-semibold text-gray-900 mb-2">Call Us</h3>
                             <p className="text-lg text-gray-600 font-light">+94 75 418 0422</p>
                         </div>
 
                         <div className="text-center">
-                            <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
-                                <MapPin className="w-8 h-8 text-secondary" />
+                            <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                <MapPin className="w-8 h-8 text-primary" />
                             </div>
                             <h3 className="text-xl font-semibold text-gray-900 mb-2">Address</h3>
                             <p className="text-lg text-gray-600 font-light">

@@ -7,27 +7,27 @@ import { BarChart3, Users, Clock, Target, CheckCircle, TrendingUp } from 'lucide
 const WhyChooseUs = () => {
     const benefits = [
         {
-            icon: <BarChart3 className="w-6 h-6" />,
+            icon: <BarChart3 className="w-6 h-6 md:w-8 md:h-8" />,
             title: "Data-Driven Strategy",
             description: "Strategic decisions backed by analytics and real-time data insights."
         },
         {
-            icon: <Users className="w-6 h-6" />,
+            icon: <Users className="w-6 h-6 md:w-8 md:h-8" />,
             title: "Engaged Community",
             description: "Build and nurture an active, engaged community around your brand."
         },
         {
-            icon: <Clock className="w-6 h-6" />,
+            icon: <Clock className="w-6 h-6 md:w-8 md:h-8" />,
             title: "Consistent Presence",
             description: "Regular posting schedule and timely response to engagement."
         },
         {
-            icon: <Target className="w-6 h-6" />,
+            icon: <Target className="w-6 h-6 md:w-8 md:h-8" />,
             title: "Targeted Growth",
             description: "Focus on reaching and engaging your ideal audience."
         },
         {
-            icon: <CheckCircle className="w-6 h-6" />,
+            icon: <CheckCircle className="w-6 h-6 md:w-8 md:h-8" />,
             title: "Quality Content",
             description: "High-quality, branded content that resonates with your audience."
         },
@@ -67,9 +67,9 @@ const WhyChooseUs = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.1, delay: index * 0.1 }}
-                            className="bg-primary/5 p-8 rounded-xl border border-secondary/10"
+                            className="bg-white p-8 rounded-xl border border-secondary/5"
                         >
-                            <div className="rounded-2xl bg-primary p-4 text-secondary w-fit mb-6">
+                            <div className="rounded-2xl bg-primary/10 p-4 text-primary w-fit mb-6">
                                 {benefit.icon}
                             </div>
                             <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tighter text-secondary mb-4">

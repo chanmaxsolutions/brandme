@@ -3,25 +3,26 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, Users, BookOpen } from 'lucide-react';
+import Link from 'next/link';
 
 const courseDetails = [
     {
-        icon: <Calendar className="w-6 h-6" />,
+        icon: <Calendar className="w-6 h-6 md:w-8 md:h-8" />,
         label: "Next Batch",
         value: "January 15, 2024"
     },
     {
-        icon: <Clock className="w-6 h-6" />,
+        icon: <Clock className="w-6 h-6 md:w-8 md:h-8" />,
         label: "Duration",
         value: "4 Weeks"
     },
     {
-        icon: <Users className="w-6 h-6" />,
+        icon: <Users className="w-6 h-6 md:w-8 md:h-8" />,
         label: "Batch Size",
         value: "Limited to 20"
     },
     {
-        icon: <BookOpen className="w-6 h-6" />,
+        icon: <BookOpen className="w-6 h-6 md:w-8 md:h-8" />,
         label: "Live Sessions",
         value: "2 Per Week"
     }
@@ -29,7 +30,7 @@ const courseDetails = [
 
 const PricingSection = () => {
     return (
-        <section className="py-20 md:py-32 bg-primary/5">
+        <section className="py-20 md:py-32 bg-gray-50">
             <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto">
                     <motion.div
@@ -62,7 +63,7 @@ const PricingSection = () => {
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 className="bg-white rounded-xl p-6 text-center border border-gray-100"
                             >
-                                <div className="rounded-full bg-primary p-3 w-fit mx-auto mb-4">
+                                <div className="rounded-full bg-primary/10 p-4 text-primary w-fit mx-auto mb-4">
                                     {detail.icon}
                                 </div>
                                 <p className="text-gray-600 text-sm mb-1">{detail.label}</p>
@@ -86,9 +87,15 @@ const PricingSection = () => {
                             </div>
                         </div>
 
-                        <button className="px-12 py-4 rounded-full bg-primary text-secondary text-xl hover:opacity-90 transition-all duration-300">
+
+
+
+                        <Link
+                            href="/services/linkedin-masterclass/register"
+                            className="px-12 py-4 rounded-full bg-primary text-secondary text-xl hover:opacity-90 transition-all duration-300"
+                        >
                             Reserve Your Seat
-                        </button>
+                        </Link>
 
                         <p className="text-gray-500 text-sm mt-4">
                             * Limited time offer for early registrations

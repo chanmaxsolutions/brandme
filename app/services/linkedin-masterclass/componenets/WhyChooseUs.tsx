@@ -7,32 +7,32 @@ import { Target, Users, Trophy, Rocket, BarChart3, Crown } from 'lucide-react';
 const WhyChooseUs = () => {
     const benefits = [
         {
-            icon: <Target className="w-6 h-6" />,
+            icon: <Target className="w-6 h-6 md:w-8 md:h-8" />,
             title: "Growth Strategy",
             description: "Learn proven techniques to grow your network and establish a strong LinkedIn presence."
         },
         {
-            icon: <Users className="w-6 h-6" />,
+            icon: <Users className="w-6 h-6 md:w-8 md:h-8" />,
             title: "Lead Generation",
             description: "Convert your LinkedIn profile into a powerful lead generation machine."
         },
         {
-            icon: <Trophy className="w-6 h-6" />,
+            icon: <Trophy className="w-6 h-6 md:w-8 md:h-8" />,
             title: "Personal Brand",
             description: "Build authority and become a recognized thought leader in your industry."
         },
         {
-            icon: <Rocket className="w-6 h-6" />,
+            icon: <Rocket className="w-6 h-6 md:w-8 md:h-8" />,
             title: "Engagement Strategy",
             description: "Master content creation that drives meaningful engagement and conversations."
         },
         {
-            icon: <BarChart3 className="w-6 h-6" />,
+            icon: <BarChart3 className="w-6 h-6 md:w-8 md:h-8" />,
             title: "Measurable ROI",
             description: "Track and optimize your LinkedIn activities for maximum business impact."
         },
         {
-            icon: <Crown className="w-6 h-6" />,
+            icon: <Crown className="w-6 h-6 md:w-8 md:h-8" />,
             title: "Expert Support",
             description: "Get guidance from industry experts with proven LinkedIn success."
         }
@@ -67,9 +67,9 @@ const WhyChooseUs = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.1, delay: index * 0.1 }}
-                            className="bg-primary/5 p-8 rounded-xl border border-secondary/10"
+                            className="bg-white p-8 rounded-xl border border-secondary/5"
                         >
-                            <div className="rounded-2xl bg-primary p-4 text-secondary w-fit mb-6">
+                            <div className="rounded-2xl bg-primary/10 p-4 text-primary w-fit mb-6">
                                 {benefit.icon}
                             </div>
                             <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tighter text-secondary mb-4">

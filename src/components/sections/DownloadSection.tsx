@@ -80,7 +80,7 @@ const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose }) => {
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.2 }}
-                className="relative bg-white rounded-2xl p-8 w-full max-w-2xl mx-4"
+                className="relative bg-white rounded-2xl p-8 w-full max-w-xl mx-4"
             >
                 <button
                     onClick={onClose}
@@ -154,7 +154,7 @@ const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose }) => {
                     <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-fit mx-auto px-12 py-4 bg-primary text-secondary rounded-full text-xl hover:opacity-90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                        className="w-fit mx-auto px-12 py-4 bg-primary text-secondary rounded-full text-xl hover:bg-primary/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                     >
                         {isSubmitting ? 'Downloading...' : 'Download Now'}
                     </button>
@@ -168,44 +168,38 @@ const DownloadSection: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
-        <section className="bg-secondary">
-            <div className="container mx-auto">
-                <div className="grid md:grid-cols-2 min-h-[300px]">
-                    {/* Left Column - Big Text */}
-                    <div className="p-8 md:p-12 flex items-center">
-                        <motion.div
+        <section className="bg-secondary py-20">
+            <div className="container mx-auto px-4">
+                <div className="max-w-3xl mx-auto text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.1 }}
+                        className="space-y-8"
+                    >
+                        <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tighter text-primary">
+                            Free Social Media Marketing Guide
+                        </h2>
+
+                        <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.1 }}
-                            className='text-center md:text-left'
+                            transition={{ delay: 0.05, duration: 0.1 }}
+                            className="text-xl md:text-2xl text-white/80 font-light tracking-tighter"
                         >
-                            <h2 className="text-5xl md:text-4xl lg:text-6xl font-semibold tracking-tighter text-primary mb-6">
-                                Free Social Media Marketing Guide
-                            </h2>
+                            Discover the secrets to mastering your social media presence
+                        </motion.p>
 
-                            <motion.p
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.05, duration: 0.1 }}
-                                className="text-xl md:text-2xl text-white/80 font-light tracking-tighter"
-                            >
-                                Discover the secrets to mastering your social media presence
-                            </motion.p>
-                        </motion.div>
-                    </div>
-
-                    {/* Right Column - CTA Button */}
-                    <div className="pb-8 md:p-12 flex items-center justify-center">
                         <motion.button
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1, duration: 0.1 }}
                             onClick={() => setIsModalOpen(true)}
-                            className="bg-primary text-secondary px-8 py-4 rounded-full hover:opacity-90 transition-all duration-300 flex items-center gap-2 text-lg"
+                            className="bg-primary text-secondary px-8 py-3 rounded-full hover:bg-primary/90 transition-all duration-300 flex items-center gap-2 text-xl mx-auto"
                         >
                             Download Free Checklist
                         </motion.button>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 

@@ -16,9 +16,9 @@ export default function ThankYouPage() {
                         transition={{ duration: 0.5 }}
                         className="space-y-8"
                     >
-                        <div className="w-24 h-24 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-8">
+                        <div className="w-24 h-24 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-8">
                             <svg
-                                className="w-12 h-12 text-secondary"
+                                className="w-12 h-12 text-primary"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"

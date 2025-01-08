@@ -7,32 +7,32 @@ import { Target, TrendingUp, Search, BarChart3, Users, Rocket } from 'lucide-rea
 const WhyChooseUs = () => {
     const benefits = [
         {
-            icon: <Target className="w-6 h-6" />,
+            icon: <Target className="w-6 h-6 md:w-8 md:h-8" />,
             title: "Targeted Campaigns",
             description: "Precision-targeted advertising campaigns that reach your ideal audience."
         },
         {
-            icon: <TrendingUp className="w-6 h-6" />,
+            icon: <TrendingUp className="w-6 h-6 md:w-8 md:h-8" />,
             title: "Highly ROI Focused",
             description: "Data-driven strategies designed to maximize your marketing investment."
         },
         {
-            icon: <Search className="w-6 h-6" />,
+            icon: <Search className="w-6 h-6 md:w-8 md:h-8" />,
             title: "Market Research",
             description: "In-depth analysis of your market, competitors, and target audience."
         },
         {
-            icon: <BarChart3 className="w-6 h-6" />,
+            icon: <BarChart3 className="w-6 h-6 md:w-8 md:h-8" />,
             title: "Performance Tracking",
             description: "Comprehensive analytics and reporting on campaign performance."
         },
         {
-            icon: <Users className="w-6 h-6" />,
+            icon: <Users className="w-6 h-6 md:w-8 md:h-8" />,
             title: "Audience Growth",
             description: "Strategic approaches to expand and engage your follower base."
         },
         {
-            icon: <Rocket className="w-6 h-6" />,
+            icon: <Rocket className="w-6 h-6 md:w-8 md:h-8" />,
             title: "Brand Amplification",
             description: "Boost your brand visibility and reach across all platforms."
         }
@@ -67,9 +67,9 @@ const WhyChooseUs = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.1, delay: index * 0.1 }}
-                            className="bg-primary/5 p-8 rounded-xl border border-secondary/10"
+                            className="bg-white p-8 rounded-xl border border-secondary/5"
                         >
-                            <div className="rounded-2xl bg-primary p-4 text-secondary w-fit mb-6">
+                            <div className="rounded-2xl bg-primary/10 p-4 text-primary w-fit mb-6">
                                 {benefit.icon}
                             </div>
                             <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tighter text-secondary mb-4">

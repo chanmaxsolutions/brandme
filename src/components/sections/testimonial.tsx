@@ -116,7 +116,7 @@ const TestimonialSection = () => {
                         key={currentIndex}
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
-                        className="bg-primary/5 rounded-2xl p-8 md:p-12  border border-secondary/10"
+                        className="bg-white rounded-2xl p-8 md:p-12  border border-gray-100"
                     >
                         <div className="flex flex-col items-center text-center">
                             {/* Testimonial Text */}

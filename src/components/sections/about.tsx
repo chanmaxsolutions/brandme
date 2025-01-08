@@ -1,73 +1,80 @@
+// components/About/index.tsx
 'use client';
 
 import React from 'react';
-import { Users, Target, Globe, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const About = () => {
     return (
-        <section className="bg-primary py-20 md:py-32">
-            <div className="container max-w-6xl mx-auto px-4">
-                {/* Main Content */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20"
-                >
-                    {/* Left Column */}
-                    <div>
-                        <h2 className="text-4xl md:text-5xl lg:text-7xl font-semibold tracking-tighter text-secondary mb-8">
-                            We Create <br />
-                            Digital Impact
-                        </h2>
-                        <p className="text-lg md:text-xl text-gray-900 mb-8 font-light">
-                            At BrandMe, we transform ideas into powerful digital experiences.
-                            Our passion for innovation drives us to create solutions that make
-                            a lasting impact for our clients.
-                        </p>
+        <section className="py-20 bg-gray-50">
+            <div className="container mx-auto px-4">
+                <div className="max-w-6xl mx-auto">
+                    {/* Main Content Grid */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16">
+                        {/* Left Column - Big Impact Text */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5 }}
+                            className="space-y-8"
+                        >
+                            <h2 className="text-7xl md:text-8xl lg:text-9xl font-semibold text-secondary/15 tracking-tighter">
+                                About
+                            </h2>
+                            <p className="text-4xl md:text-5xl font-semibold text-secondary tracking-tighter">
+                                Building brands that make a digital impact
+                            </p>
 
-                    </div>
+                            <Link href="/about">
+                                <button className="inline-flex items-center justify-center px-8 py-3 text-lg text-secondary bg-primary border-2 border-primary rounded-full hover:opacity-90 transition-all duration-300 mt-6">
+                                    Learn More
+                                </button>
+                            </Link>
+                        </motion.div>
 
-                    {/* Right Column - Stats */}
-                    <div className="grid grid-cols-2 gap-8">
-                        {[
-                            { number: "02+", label: "Years Experience" },
-                            { number: "30+", label: "Projects Delivered" },
-                            { number: "99%", label: "Client Satisfaction" },
-                            { number: "20+", label: "Clients Globally" }
-                        ].map((stat, index) => (
-                            <div key={index} className="text-center">
-                                <h3 className="text-5xl md:text-7xl font-bold text-secondary mb-2">
-                                    {stat.number}
-                                </h3>
-                                <p className="text-secondary text-xl">
-                                    {stat.label}
+                        {/* Right Column - Description and Values */}
+                        <motion.div
+                            initial={{ opacity: 0, x: 20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5 }}
+                            className="space-y-12 md:pt-8"
+                        >
+                            <div className="space-y-6">
+                                <p className="text-xl text-secondary/80 font-light">
+                                    At BrandMe, we transform businesses through innovative digital solutions and strategic thinking. Our passion for excellence drives everything we do, ensuring your brand stands out in the digital landscape.
+                                </p>
+                                <p className="text-xl text-secondary/80 font-light">
+                                    Through our comprehensive approach to digital marketing and development, we help businesses create lasting connections with their audience and achieve measurable growth.
                                 </p>
                             </div>
-                        ))}
-                    </div>
-                </motion.div>
 
-                {/* Values Section */}
-
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                    {[
-                        { icon: <Users className="w-6 h-6" />, title: "Client-Focused" },
-                        { icon: <Target className="w-6 h-6" />, title: "Result-Driven" },
-                        { icon: <Globe className="w-6 h-6" />, title: "Global Reach" },
-                        { icon: <Zap className="w-6 h-6" />, title: "Fast Execution" }
-                    ].map((value, index) => (
-                        <div key={index} className="bg-primary border border-secondary/10 rounded-xl p-6 text-center transition-all duration-300">
-                            <div className="bg-secondary text-primary rounded-2xl p-4 w-fit mx-auto mb-4">
-                                {value.icon}
+                            {/* Values or Key Points */}
+                            <div className="grid grid-cols-2 gap-6">
+                                {[
+                                    { number: '01', label: 'Client Focus' },
+                                    { number: '02', label: 'Data Driven' },
+                                    { number: '03', label: 'Innovation' },
+                                    { number: '04', label: 'Excellence' }
+                                ].map((item, index) => (
+                                    <motion.div
+                                        key={index}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                                        className="space-y-2"
+                                    >
+                                        <span className="text-2xl text-primary font-light">{item.number}</span>
+                                        <p className="text-xl font-semibold text-secondary tracking-tight">{item.label}</p>
+                                    </motion.div>
+                                ))}
                             </div>
-                            <h3 className="text-xl tracking-tighter text-secondary">
-                                {value.title}
-                            </h3>
-                        </div>
-                    ))}
+                        </motion.div>
+                    </div>
                 </div>
-
             </div>
         </section>
     );

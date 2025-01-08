@@ -35,9 +35,9 @@ const ThankYouPage = () => {
                     >
                         {/* Success Message */}
                         <div className="space-y-6">
-                            <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto">
+                            <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto">
                                 <svg
-                                    className="w-10 h-10 text-secondary"
+                                    className="w-10 h-10 text-primary"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
@@ -61,15 +61,16 @@ const ThankYouPage = () => {
                         </div>
 
                         {/* Payment Instructions */}
-                        <div className="bg-gray-50 rounded-2xl p-8 text-left space-y-6">
-                            <h2 className="text-2xl font-semibold text-secondary">Payment Details</h2>
+                        <div className="bg-gray-50 rounded-2xl border border-gray-100 p-8 text-left space-y-6">
 
+                            <h2 className="text-2xl font-semibold text-secondary">Payment Details</h2>
+                            <div className='border-t  border-gray-100'></div>
                             <div className="space-y-4">
                                 {Object.entries(bankDetails).map(([key, value]) => (
                                     <div key={key} className="flex justify-between items-center">
                                         <span className="text-gray-600 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}:</span>
                                         <div className="flex items-center gap-2">
-                                            <span className="font-semibold">{value}</span>
+                                            <span className="font-medium">{value}</span>
                                             <button
                                                 onClick={() => copyToClipboard(value)}
                                                 className="text-primary hover:text-secondary transition-colors"
@@ -81,17 +82,16 @@ const ThankYouPage = () => {
                                 ))}
                             </div>
 
-                            <div className="pt-4 border-t border-gray-200">
-                                <p className="text-gray-600 mb-4">
-                                    After making the payment, please send the payment proof via WhatsApp:
+                            <div className="pt-4 border-t border-gray-100 text-center">
+                                <p className="text-gray-600 mb-4 font-light text-lg">
+                                    After making the payment, please send the payment proof via WhatsApp
                                 </p>
                                 <a
                                     href={whatsappLink}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition-all duration-300"
+                                    className="inline-flex items-center gap-2 bg-primary text-secondary px-8 py-3 rounded-full hover:bg-opacity-90 transition-all duration-300"
                                 >
-                                    <MessageCircleMore className="w-5 h-5" />
                                     Send Payment Proof
                                 </a>
                             </div>

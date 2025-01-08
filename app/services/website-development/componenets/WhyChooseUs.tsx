@@ -7,32 +7,32 @@ import { Layout, Code, Smartphone, Gauge, Shield, Wrench } from 'lucide-react';
 const WhyChooseUs = () => {
     const benefits = [
         {
-            icon: <Layout className="w-6 h-6" />,
+            icon: <Layout className="w-6 h-6 md:w-8 md:h-8" />,
             title: "Modern Design",
             description: "Clean, intuitive interfaces that engage visitors and represent your brand perfectly."
         },
         {
-            icon: <Code className="w-6 h-6" />,
+            icon: <Code className="w-6 h-6 md:w-8 md:h-8" />,
             title: "Clean Quality Code",
             description: "Well-structured, maintainable code following the latest development standards."
         },
         {
-            icon: <Smartphone className="w-6 h-6" />,
+            icon: <Smartphone className="w-6 h-6 md:w-8 md:h-8" />,
             title: "Responsive Build",
             description: "Seamless experience across all devices and screen sizes."
         },
         {
-            icon: <Gauge className="w-6 h-6" />,
+            icon: <Gauge className="w-6 h-6 md:w-8 md:h-8" />,
             title: "Very Fast Loading",
             description: "Optimized performance for quick loading and smooth user experience."
         },
         {
-            icon: <Shield className="w-6 h-6" />,
+            icon: <Shield className="w-6 h-6 md:w-8 md:h-8" />,
             title: "High Secure Setup",
             description: "Built-in security measures to protect your website and users."
         },
         {
-            icon: <Wrench className="w-6 h-6" />,
+            icon: <Wrench className="w-6 h-6 md:w-8 md:h-8" />,
             title: "Very Easy Updates",
             description: "User-friendly systems for content management and updates."
         }
@@ -67,9 +67,9 @@ const WhyChooseUs = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.1, delay: index * 0.1 }}
-                            className="bg-primary/5 p-8 rounded-xl border border-secondary/10"
+                            className="bg-white p-8 rounded-xl border border-secondary/5"
                         >
-                            <div className="rounded-2xl bg-primary p-4 text-secondary w-fit mb-6">
+                            <div className="rounded-2xl bg-primary/10 p-4 text-primary w-fit mb-6">
                                 {benefit.icon}
                             </div>
                             <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tighter text-secondary mb-4">

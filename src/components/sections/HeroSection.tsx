@@ -18,9 +18,9 @@ const HeroSection = () => {
                 >
                     {/* Main Heading */}
                     <h1 className="text-6xl md:text-7xl lg:text-9xl font-semibold mb-6 tracking-tighter">
-                        <span className="text-secondary">The <span className='font-serif text-primary italic'>Social</span></span>
-                        <br />
-                        <span className="text-secondary">Company</span>
+                        <span className="text-secondary">Building <br /> <span className='text-primary'>Digital</span></span>
+
+                        <span className="text-secondary"> Empire</span>
                     </h1>
 
                     {/* Subheading */}
@@ -40,14 +40,14 @@ const HeroSection = () => {
                         transition={{ delay: 0.1, duration: 0.1 }}
                         className="flex flex-col sm:flex-row justify-center gap-4"
                     >
-                        <Link href="/contact">
-                            <button className="inline-flex items-center justify-center px-12 py-4 text-lg text-secondary bg-primary border-2 border-primary rounded-full hover:opacity-90 transition-all duration-300">
-                                Get A Quote
+                        <Link href="/get-quote">
+                            <button className="inline-flex items-center justify-center px-8 py-3 text-lg text-secondary bg-primary border-2 border-primary rounded-full hover:bg-primary/85 transition-all duration-300">
+                                Get Started
                             </button>
                         </Link>
-                        <Link href="/services">
-                            <button className="inline-flex items-center justify-center px-12 py-4 text-lg text-secondary border-2 border-primary rounded-full hover:bg-secondary hover:text-white transition-all duration-300">
-                                Our Services
+                        <Link href="/about">
+                            <button className="inline-flex items-center justify-center px-8 py-3 text-lg text-secondary border-2 border-primary rounded-full hover:bg-primary hover:text-secondary transition-all duration-300">
+                                Learn More
                             </button>
                         </Link>
                     </motion.div>

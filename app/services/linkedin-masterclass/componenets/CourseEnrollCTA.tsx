@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const CourseEnrollCTA = () => {
     return (
-        <section className="py-20 md:py-32 bg-primary md:pt-40">
+        <section className="bg-primary py-14 md:pt-28 ">
             <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto text-center">
                     <motion.div
@@ -16,8 +16,8 @@ const CourseEnrollCTA = () => {
                         transition={{ duration: 0.5 }}
                         className="space-y-6"
                     >
-                        <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-secondary tracking-tighter">
-                            Ready to Transform Your LinkedIn?
+                        <h2 className="text-4xl md:text-5xl lg:text-7xl font-semibold tracking-tighter text-secondary mb-6">
+                            Ready to Build <br /> Solid Personal Brand?
                         </h2>
 
                         <p className="text-xl text-secondary/80 font-light max-w-2xl mx-auto">
@@ -31,7 +31,7 @@ const CourseEnrollCTA = () => {
                             >
                                 Reserve Your Seat
                             </Link>
-                            <p className="text-secondary text-lg">
+                            <p className="text-secondary">
                                 Current Batch: 8 Seats Left
                             </p>
                         </div>
