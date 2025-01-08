@@ -3,38 +3,66 @@
 import React, { useState } from 'react';
 import { Download, X } from 'lucide-react';
 import { motion } from 'framer-motion';
-
-interface FormData {
-    name: string;
-    email: string;
-    phone: string;
-}
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { DownloadFormSchema, type DownloadFormData } from '@/lib/airtable';
+import CountryCodeSelect from '@/components/ui/CountryCodeSelect';
 
 interface DownloadModalProps {
     isOpen: boolean;
     onClose: () => void;
-    onSubmit: (data: FormData) => void;
 }
 
-const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose, onSubmit }) => {
-    const [formData, setFormData] = useState<FormData>({
-        name: '',
-        email: '',
-        phone: ''
+const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose }) => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitError, setSubmitError] = useState<string | null>(null);
+
+    const {
+        register,
+        handleSubmit,
+        setValue,
+        formState: { errors },
+    } = useForm<DownloadFormData>({
+        resolver: zodResolver(DownloadFormSchema)
     });
 
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        onSubmit(formData);
+    const onSubmit = async (data: DownloadFormData) => {
+        try {
+            setIsSubmitting(true);
+            setSubmitError(null);
 
-        const link = document.createElement('a');
-        link.href = 'https://res.cloudinary.com/db8phlsfy/image/upload/v1735994535/SMM_-_Packages_4_jartel.pdf';
-        link.download = 'Social-Media-Checklist.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+            const response = await fetch('/api/download-form', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    ...data,
+                    downloadType: 'Social Media Checklist',
+                    phone: `${data.countryCode}${data.phoneNumber}` // Combine country code and phone
+                }),
+            });
 
-        onClose();
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.error || 'Failed to submit form');
+            }
+
+            // Download the file
+            const link = document.createElement('a');
+            link.href = 'https://res.cloudinary.com/db8phlsfy/image/upload/v1735994535/SMM_-_Packages_4_jartel.pdf';
+            link.download = 'Social-Media-Checklist.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            onClose();
+        } catch (error) {
+            setSubmitError(error instanceof Error ? error.message : 'Something went wrong');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     if (!isOpen) return null;
@@ -60,66 +88,75 @@ const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose, onSubmit
                     <X className="h-8 w-8" />
                 </button>
 
-                <h3 className="text-3xl md:text-6xl font-semibold text-center md:px-12 tracking-tighter text-gray-900 mb-4">
-                    Download Your <span className='underline underline-offset-3 decoration-primary decoration-6 rounded-lg'>Free</span> Checklist
+                <h3 className="text-3xl md:text-6xl font-semibold text-center md:px-12 tracking-tighter text-secondary mb-4">
+                    Download Your <span className='text-primary'>Free</span> Checklist
                 </h3>
 
-                <p className="text-gray-600 text-center text-xl font-light mb-6">
+                <p className="text-xl text-gray-600 text-center font-light mb-8">
                     Fill in your details to receive your social media checklist.
                 </p>
 
-                <form onSubmit={handleSubmit} className="space-y-4">
+                {submitError && (
+                    <div className="p-4 bg-red-50 border border-red-200 text-red-600 rounded-xl mb-6">
+                        {submitError}
+                    </div>
+                )}
+
+                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                     <div>
-                        <label htmlFor="name" className="block text-gray-700 mb-1">
-                            Full Name
-                        </label>
                         <input
                             type="text"
-                            id="name"
-                            required
-                            className="w-full px-4 py-3 rounded-full border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"
-                            value={formData.name}
-                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                            placeholder="Full Name"
+                            {...register('name')}
+                            className="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:border-primary"
                         />
+                        {errors.name && (
+                            <p className="mt-1 text-red-500">{errors.name.message}</p>
+                        )}
                     </div>
 
                     <div>
-                        <label htmlFor="email" className="block text-gray-700 mb-1">
-                            Email Address
-                        </label>
                         <input
                             type="email"
-                            id="email"
-                            required
-                            className="w-full px-4 py-3 rounded-full border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"
-                            value={formData.email}
-                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                            placeholder="Email Address"
+                            {...register('email')}
+                            className="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:border-primary"
                         />
+                        {errors.email && (
+                            <p className="mt-1 text-red-500">{errors.email.message}</p>
+                        )}
                     </div>
 
-                    <div>
-                        <label htmlFor="phone" className="block text-gray-700 mb-1">
-                            Phone Number
-                        </label>
-                        <input
-                            type="tel"
-                            id="phone"
-                            required
-                            className="w-full px-4 py-3 rounded-full border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"
-                            value={formData.phone}
-                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        />
+                    {/* Phone Number with Country Code */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div>
+                            <CountryCodeSelect
+                                onChange={(code) => setValue('countryCode', code)}
+                            />
+                            {errors.countryCode && (
+                                <p className="mt-1 text-red-500">{errors.countryCode.message}</p>
+                            )}
+                        </div>
+                        <div className="md:col-span-2">
+                            <input
+                                type="tel"
+                                placeholder="Phone Number"
+                                {...register('phoneNumber')}
+                                className="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:border-primary"
+                            />
+                            {errors.phoneNumber && (
+                                <p className="mt-1 text-red-500">{errors.phoneNumber.message}</p>
+                            )}
+                        </div>
                     </div>
 
-                    <div className='flex items-center justify-center'>
-                        <button
-                            type="submit"
-                            className=" bg-primary text-secondary text-xl py-4 px-12 rounded-full hover:opacity-90 transition-all duration-300 flex items-center justify-center gap-2"
-                        >
-
-                            Download Now
-                        </button>
-                    </div>
+                    <button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="w-fit mx-auto px-12 py-4 bg-primary text-secondary rounded-full text-xl hover:opacity-90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                    >
+                        {isSubmitting ? 'Downloading...' : 'Download Now'}
+                    </button>
                 </form>
             </motion.div>
         </motion.div>
@@ -128,10 +165,6 @@ const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose, onSubmit
 
 const DownloadSection: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
-
-    const handleFormSubmit = (data: FormData) => {
-        console.log('Form submitted:', data);
-    };
 
     return (
         <section className="bg-secondary">
@@ -178,7 +211,6 @@ const DownloadSection: React.FC = () => {
             <DownloadModal
                 isOpen={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
-                onSubmit={handleFormSubmit}
             />
         </section>
     );

@@ -2,39 +2,39 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Target, TrendingUp, Search, BarChart3, Users, Rocket } from 'lucide-react';
+import { Target, Users, Trophy, Rocket, BarChart3, Crown } from 'lucide-react';
 
 const WhyChooseUs = () => {
     const benefits = [
         {
             icon: <Target className="w-6 h-6" />,
-            title: "Targeted Campaigns",
-            description: "Precision-targeted advertising campaigns that reach your ideal audience."
-        },
-        {
-            icon: <TrendingUp className="w-6 h-6" />,
-            title: "Highly ROI Focused",
-            description: "Data-driven strategies designed to maximize your marketing investment."
-        },
-        {
-            icon: <Search className="w-6 h-6" />,
-            title: "Market Research",
-            description: "In-depth analysis of your market, competitors, and target audience."
-        },
-        {
-            icon: <BarChart3 className="w-6 h-6" />,
-            title: "Performance Tracking",
-            description: "Comprehensive analytics and reporting on campaign performance."
+            title: "Growth Strategy",
+            description: "Learn proven techniques to grow your network and establish a strong LinkedIn presence."
         },
         {
             icon: <Users className="w-6 h-6" />,
-            title: "Audience Growth",
-            description: "Strategic approaches to expand and engage your follower base."
+            title: "Lead Generation",
+            description: "Convert your LinkedIn profile into a powerful lead generation machine."
+        },
+        {
+            icon: <Trophy className="w-6 h-6" />,
+            title: "Personal Brand",
+            description: "Build authority and become a recognized thought leader in your industry."
         },
         {
             icon: <Rocket className="w-6 h-6" />,
-            title: "Brand Amplification",
-            description: "Boost your brand visibility and reach across all platforms."
+            title: "Engagement Strategy",
+            description: "Master content creation that drives meaningful engagement and conversations."
+        },
+        {
+            icon: <BarChart3 className="w-6 h-6" />,
+            title: "Measurable ROI",
+            description: "Track and optimize your LinkedIn activities for maximum business impact."
+        },
+        {
+            icon: <Crown className="w-6 h-6" />,
+            title: "Expert Support",
+            description: "Get guidance from industry experts with proven LinkedIn success."
         }
     ];
 
@@ -48,14 +48,14 @@ const WhyChooseUs = () => {
                     className="text-center mb-20"
                 >
                     <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tighter text-primary">
-                        Why Choose Us
+                        Course Benefits
                     </h2>
                     <div className="space-y-6">
                         <p className="text-3xl text-secondary font-light tracking-tight">
-                            Marketing That Delivers
+                            What You'll Master
                         </p>
                         <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto">
-                            Strategic social media marketing solutions that drive engagement, boost conversions, and deliver measurable business results.
+                            Transform your LinkedIn presence from basic networking to strategic business growth with our comprehensive masterclass.
                         </p>
                     </div>
                 </motion.div>

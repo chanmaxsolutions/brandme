@@ -67,7 +67,7 @@ const WhyChooseUs = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.1, delay: index * 0.1 }}
-                            className="bg-white p-8 rounded-xl border border-gray-100 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
+                            className="bg-primary/5 p-8 rounded-xl border border-secondary/10"
                         >
                             <div className="rounded-2xl bg-primary p-4 text-secondary w-fit mb-6">
                                 {benefit.icon}
