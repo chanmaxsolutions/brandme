@@ -45,9 +45,9 @@ const HeroSection = () => {
                                 Get Started
                             </button>
                         </Link>
-                        <Link href="/about">
+                        <Link href="/contact">
                             <button className="inline-flex items-center justify-center px-12 py-4 text-xl text-secondary border-2 border-primary rounded-full hover:bg-primary hover:text-secondary transition-all duration-300">
-                                Learn More
+                                Contact Us
                             </button>
                         </Link>
                     </motion.div>

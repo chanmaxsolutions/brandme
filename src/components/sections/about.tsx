@@ -29,7 +29,7 @@ const About = () => {
 
                             <Link href="/about">
                                 <button className="inline-flex items-center justify-center px-12 py-4 text-xl text-secondary bg-primary border-2 border-primary rounded-full hover:opacity-90 transition-all duration-300 mt-6">
-                                    Learn More
+                                    Our Story
                                 </button>
                             </Link>
                         </motion.div>
