@@ -1,20 +1,11 @@
+// src/app/thank-you/page.tsx
+'use client';
 
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowLeft, Clock } from 'lucide-react';
 
-// src/app/thank-you/page.tsx
-export const metadata = {
-    title: 'Thank You | BrandMe',
-    description: 'Thank you for contacting BrandMe. We will be in touch with you shortly.',
-    openGraph: {
-        title: 'Thank You | BrandMe',
-        description: 'Thank you for contacting BrandMe.',
-        url: 'https://brandme.top/thank-you',
-    },
-    robots: { index: false, follow: false, }
-}
 
 const ThankYouPage = () => {
     return (
