@@ -168,7 +168,7 @@ const Navigation = () => {
                             {/* Mobile Get Started Button */}
                             <Link
                                 href="/get-quote"
-                                className="block bg-primary text-white px-8 py-3 rounded-full hover:opacity-90 transition-colors duration-300 text-lg text-center"
+                                className="block bg-primary text-secondary px-8 py-3 rounded-full hover:opacity-90 transition-colors duration-300 text-lg text-center"
                                 onClick={() => setIsOpen(false)}
                             >
                                 Get Started
