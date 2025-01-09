@@ -5,6 +5,17 @@ import React from 'react';
 import PageHeader from '@/components/PageHeader';
 import { motion } from 'framer-motion';
 
+// src/app/terms/page.tsx
+export const metadata = {
+    title: 'Terms of Service | BrandMe',
+    description: 'Read BrandMe\'s terms of service and conditions for our social media marketing and digital services.',
+    openGraph: {
+        title: 'Terms of Service | BrandMe',
+        description: 'Read BrandMe\'s terms of service and conditions.',
+        url: 'https://brandme.top/terms',
+    }
+}
+
 const TermsPage = () => {
     return (
         <main className="w-full">

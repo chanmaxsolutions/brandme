@@ -5,6 +5,17 @@ import React from 'react';
 import PageHeader from '@/components/PageHeader';
 import { motion } from 'framer-motion';
 
+// src/app/privacy/page.tsx
+export const metadata = {
+    title: 'Privacy Policy | BrandMe',
+    description: 'Learn about BrandMe\'s privacy policy and how we protect your data while providing our digital marketing services.',
+    openGraph: {
+        title: 'Privacy Policy | BrandMe',
+        description: 'Learn about BrandMe\'s privacy policy and data protection measures.',
+        url: 'https://brandme.top/privacy',
+    }
+}
+
 const PrivacyPage = () => {
     return (
         <main className="w-full">

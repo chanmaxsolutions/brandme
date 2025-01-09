@@ -9,6 +9,17 @@ import PricingPlans from './componenets/PricingPlans';
 import FAQ from './componenets/FAQ';
 import CourseEnrollCTA from './componenets/CourseEnrollCTA';
 
+// src/app/services/linkedin-masterclass/page.tsx
+export const metadata = {
+    title: 'LinkedIn Masterclass | BrandMe',
+    description: 'Transform your LinkedIn presence with our comprehensive masterclass. Learn proven strategies for professional growth.',
+    openGraph: {
+        title: 'LinkedIn Masterclass | BrandMe',
+        description: 'Transform your LinkedIn presence with our comprehensive masterclass.',
+        url: 'https://brandme.top/services/linkedin-masterclass',
+    }
+}
+
 const LinkedInMasterclassPage = () => {
     return (
         <>

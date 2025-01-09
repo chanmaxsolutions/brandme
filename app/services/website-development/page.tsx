@@ -8,6 +8,17 @@ import Process from './componenets/Process';
 import FAQ from './componenets/FAQ';
 import CTASection from '@/components/sections/cta';
 
+// src/app/services/website-development/page.tsx
+export const metadata = {
+    title: 'Website Development Services | BrandMe',
+    description: 'Professional website development services that combine stunning design with powerful functionality. Custom solutions for your business needs.',
+    openGraph: {
+        title: 'Website Development Services | BrandMe',
+        description: 'Professional website development services with stunning design and functionality.',
+        url: 'https://brandme.top/services/website-development',
+    }
+}
+
 const WebsiteDevelopmentPage = () => {
     return (
         <>

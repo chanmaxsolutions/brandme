@@ -9,6 +9,17 @@ import Process from './componenets/Process';
 import FAQ from './componenets/FAQ';
 import CTASection from '@/components/sections/cta';
 
+// src/app/services/social-media-marketing/page.tsx
+export const metadata = {
+    title: 'Social Media Marketing Services | BrandMe',
+    description: 'Professional social media marketing services to boost your brand visibility and engagement. Custom strategies for all major platforms.',
+    openGraph: {
+        title: 'Social Media Marketing Services | BrandMe',
+        description: 'Professional social media marketing services to boost your brand visibility and engagement.',
+        url: 'https://brandme.top/services/social-media-marketing',
+    }
+}
+
 
 const SocialMediaMarketingPage = () => {
     return (

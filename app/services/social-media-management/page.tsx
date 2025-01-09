@@ -8,6 +8,17 @@ import Process from './components/Process';
 import FAQ from './components/FAQ';
 import CTASection from '@/components/sections/cta';
 
+// src/app/services/social-media-management/page.tsx
+export const metadata = {
+    title: 'Social Media Management Services | BrandMe',
+    description: 'Expert social media management services in Sri Lanka. Professional content creation, strategic scheduling, and active engagement to grow your brand online.',
+    openGraph: {
+        title: 'Social Media Management Services | BrandMe',
+        description: 'Expert social media management services to grow your brand online. Professional content creation and strategic engagement.',
+        url: 'https://brandme.top/services/social-media-management',
+    }
+}
+
 const SocialMediaManagementPage = () => {
     return (
         <>

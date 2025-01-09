@@ -4,7 +4,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { MessageCircleMore, Copy, ArrowLeft } from 'lucide-react';
+import { Copy, ArrowLeft } from 'lucide-react';
+
+// src/app/services/linkedin-masterclass/thank-you/page.tsx
+export const metadata = {
+    title: 'Registration Confirmed | LinkedIn Masterclass',
+    description: 'Thank you for registering for our LinkedIn Masterclass. Check your email for next steps.',
+    openGraph: {
+        title: 'Registration Confirmed | LinkedIn Masterclass',
+        description: 'Thank you for registering for our LinkedIn Masterclass.',
+        url: 'https://brandme.top/services/linkedin-masterclass/thank-you',
+    },
+    robots: {
+        index: false,
+        follow: false,
+    }
+}
 
 const ThankYouPage = () => {
     const bankDetails = {

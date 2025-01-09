@@ -11,6 +11,18 @@ import Link from 'next/link';
 import CountryCodeSelect from '@/components/ui/CountryCodeSelect';
 import { QuoteFormSchema, type QuoteFormData } from '@/lib/airtable';
 
+
+// src/app/get-quote/page.tsx
+export const metadata = {
+    title: 'Get a Quote | BrandMe Social Media Marketing',
+    description: 'Request a quote for our social media marketing services. Custom solutions tailored to your business needs and goals.',
+    openGraph: {
+        title: 'Get a Quote | BrandMe Social Media Marketing',
+        description: 'Request a quote for our social media marketing services.',
+        url: 'https://brandme.top/get-quote',
+    }
+}
+
 const services = [
     { id: 'social-media-management', label: 'Social Media Marketing' },
     { id: 'social-media-marketing', label: 'Social Media Management' },

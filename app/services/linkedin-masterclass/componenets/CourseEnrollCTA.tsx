@@ -21,7 +21,7 @@ const CourseEnrollCTA = () => {
                         </h2>
 
                         <p className="text-xl text-secondary/80 font-light max-w-2xl mx-auto">
-                            Join our next cohort starting January 15th. Only 20 seats available.
+                            Join our next cohort starting February 10th. Only 20 seats available.
                         </p>
 
                         <div className="flex flex-col items-center justify-center gap-3 pt-6">
@@ -32,7 +32,7 @@ const CourseEnrollCTA = () => {
                                 Reserve Your Seat
                             </Link>
                             <p className="text-secondary">
-                                Current Batch: 8 Seats Left
+                                Current Batch: 20 Seats Left
                             </p>
                         </div>
                     </motion.div>

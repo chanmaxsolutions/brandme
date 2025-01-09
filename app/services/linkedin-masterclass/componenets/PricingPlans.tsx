@@ -9,7 +9,7 @@ const courseDetails = [
     {
         icon: <Calendar className="w-6 h-6 md:w-8 md:h-8" />,
         label: "Next Batch",
-        value: "January 15, 2024"
+        value: "February 10, 2025"
     },
     {
         icon: <Clock className="w-6 h-6 md:w-8 md:h-8" />,
