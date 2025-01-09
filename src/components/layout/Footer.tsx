@@ -24,13 +24,13 @@ const Footer = () => {
                             We help businesses grow their online presence and engage with their audience effectively.
                         </p>
                         <div className="flex gap-4">
-                            <Link href="https://facebook.com" target="_blank" className="text-secondary hover:text-secondary/80 transition-colors">
+                            <Link href="https://www.facebook.com/profile.php?id=100089964147482" target="_blank" className="text-secondary hover:text-secondary/80 transition-colors">
                                 <Facebook className="w-6 h-6" />
                             </Link>
-                            <Link href="https://instagram.com" target="_blank" className="text-secondary hover:text-secondary/80 transition-colors">
+                            <Link href="https://www.instagram.com/brandme.top/" target="_blank" className="text-secondary hover:text-secondary/80 transition-colors">
                                 <Instagram className="w-6 h-6" />
                             </Link>
-                            <Link href="https://linkedin.com" target="_blank" className="text-secondary hover:text-secondary/80 transition-colors">
+                            <Link href="https://www.linkedin.com/company/brand-me-top/" target="_blank" className="text-secondary hover:text-secondary/80 transition-colors">
                                 <Linkedin className="w-6 h-6" />
                             </Link>
                         </div>

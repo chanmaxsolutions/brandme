@@ -90,8 +90,8 @@ const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose }) => {
                     <X className="h-8 w-8" />
                 </button>
 
-                <h3 className="text-3xl md:text-6xl font-semibold text-center md:px-14 tracking-tighter text-secondary mb-4">
-                    Download Your <span className='text-primary'>Free</span> Checklist
+                <h3 className="text-4xl md:text-6xl font-semibold text-center md:px-10 tracking-tighter text-secondary mb-4">
+                    Download Your <span className='text-primary'>Free</span> SMM Guide
                 </h3>
 
                 <p className="text-xl text-gray-600 text-center font-light mb-8">
@@ -198,7 +198,7 @@ const DownloadSection: React.FC = () => {
                             onClick={() => setIsModalOpen(true)}
                             className="bg-primary text-secondary px-12 py-4 text-xl rounded-full hover:bg-primary/90 transition-all duration-300 flex items-center gap-2 mx-auto"
                         >
-                            Download Free Checklist
+                            Download Free Guide
                         </motion.button>
                     </motion.div>
                 </div>

@@ -13,21 +13,21 @@ interface TestimonialProps {
 
 const testimonials: TestimonialProps[] = [
     {
-        name: "Sarah Johnson",
-        role: "Marketing Director",
-        company: "TechCorp Inc",
+        name: "Sendil Kumar",
+        role: "Founder & CEO ",
+        company: "Digiacceron Pvt Ltd",
         text: "Working with BrandMe has been transformative for our social media presence. Their strategic approach and creative content have significantly boosted our engagement rates."
     },
     {
-        name: "Michael Chen",
+        name: "Dinesh Bose",
         role: "CEO",
-        company: "Startup Hub",
+        company: "Deecodes Pvt Ltd",
         text: "The team at BrandMe doesn't just deliver services; they deliver results. Our online presence has grown exponentially since we started working with them."
     },
     {
-        name: "Emma Davis",
-        role: "Brand Manager",
-        company: "Fashion Forward",
+        name: "Vaithiyanathan. M",
+        role: "Professor",
+        company: "Sairam Institutions SRM University",
         text: "Their attention to detail and understanding of our brand voice has made them an invaluable partner in our digital journey."
     }
 ];
