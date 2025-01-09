@@ -36,17 +36,21 @@ const MissionValues = () => {
                     {/* Section Header */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5 }}
-                        className="text-center mb-16"
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.1 }}
+                        className="text-center mb-20"
                     >
-                        <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-primary tracking-tighter mb-6">
+                        <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tighter text-primary ">
                             Mission & Values
                         </h2>
-                        <p className="text-xl text-secondary/80 font-light max-w-2xl mx-auto">
-                            Driving digital excellence through our core principles.
-                        </p>
+                        <div className="space-y-6">
+                            <p className="text-3xl text-secondary font-light tracking-tight">
+                                Driving digital excellence through our core principles.
+                            </p>
+                            <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto">
+                                At BrandMe, we're committed to transforming personal brands through strategic digital solutions. Our mission is to empower professionals with the tools and strategies they need to stand out in today's competitive landscape.
+                            </p>
+                        </div>
                     </motion.div>
 
                     <div className="space-y-8">

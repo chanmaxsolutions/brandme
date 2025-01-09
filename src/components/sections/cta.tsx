@@ -27,7 +27,7 @@ const CTASection = () => {
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <Link href="/get-quote">
-                            <button className="inline-flex items-center justify-center px-8 py-3 text-lg text-primary bg-secondary rounded-full hover:opacity-90 transition-all duration-300">
+                            <button className="inline-flex items-center justify-center px-12 py-4 text-xl text-primary bg-secondary rounded-full hover:opacity-90 transition-all duration-300">
                                 Get Started
                             </button>
                         </Link>

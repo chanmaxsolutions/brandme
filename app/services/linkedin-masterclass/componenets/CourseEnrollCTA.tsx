@@ -24,10 +24,10 @@ const CourseEnrollCTA = () => {
                             Join our next cohort starting January 15th. Only 20 seats available.
                         </p>
 
-                        <div className="flex flex-col  items-center justify-center gap-3 pt-6">
+                        <div className="flex flex-col items-center justify-center gap-3 pt-6">
                             <Link
                                 href="/services/linkedin-masterclass/register"
-                                className="px-12 py-4 rounded-full bg-secondary text-primary text-xl hover:opacity-90 transition-all duration-300 flex items-center gap-2"
+                                className="px-12 py-4 text-xl rounded-full bg-secondary text-primary hover:opacity-90 transition-all duration-300 flex items-center gap-2"
                             >
                                 Reserve Your Seat
                             </Link>

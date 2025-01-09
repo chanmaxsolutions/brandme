@@ -23,12 +23,12 @@ const About = () => {
                             <h2 className="text-7xl md:text-8xl lg:text-9xl font-semibold text-secondary/15 tracking-tighter">
                                 About
                             </h2>
-                            <p className="text-4xl md:text-5xl font-semibold text-secondary tracking-tighter">
-                                Building brands that make a digital impact
+                            <p className="text-5xl md:text-6xl lg:text-7xl font-semibold text-secondary tracking-tighter">
+                                Building Brands That Make a Digital Impact.
                             </p>
 
                             <Link href="/about">
-                                <button className="inline-flex items-center justify-center px-8 py-3 text-lg text-secondary bg-primary border-2 border-primary rounded-full hover:opacity-90 transition-all duration-300 mt-6">
+                                <button className="inline-flex items-center justify-center px-12 py-4 text-xl text-secondary bg-primary border-2 border-primary rounded-full hover:opacity-90 transition-all duration-300 mt-6">
                                     Learn More
                                 </button>
                             </Link>

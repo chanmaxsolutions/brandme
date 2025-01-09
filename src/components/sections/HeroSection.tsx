@@ -41,12 +41,12 @@ const HeroSection = () => {
                         className="flex flex-col sm:flex-row justify-center gap-4"
                     >
                         <Link href="/get-quote">
-                            <button className="inline-flex items-center justify-center px-8 py-3 text-lg text-secondary bg-primary border-2 border-primary rounded-full hover:bg-primary/85 transition-all duration-300">
+                            <button className="inline-flex items-center justify-center px-12 py-4 text-xl text-secondary bg-primary border-2 border-primary rounded-full hover:bg-primary/85 transition-all duration-300">
                                 Get Started
                             </button>
                         </Link>
                         <Link href="/about">
-                            <button className="inline-flex items-center justify-center px-8 py-3 text-lg text-secondary border-2 border-primary rounded-full hover:bg-primary hover:text-secondary transition-all duration-300">
+                            <button className="inline-flex items-center justify-center px-12 py-4 text-xl text-secondary border-2 border-primary rounded-full hover:bg-primary hover:text-secondary transition-all duration-300">
                                 Learn More
                             </button>
                         </Link>

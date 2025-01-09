@@ -11,21 +11,23 @@ function CompanyStory() {
             <div className="container mx-auto px-4">
                 <div className="max-w-3xl mx-auto">
                     {/* Story Header */}
+
+
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5 }}
-                        className="text-center mb-16"
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.1 }}
+                        className="text-center mb-10"
                     >
-                        <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-primary tracking-tighter mb-6">
+                        <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tighter text-primary ">
                             Our Story
                         </h2>
+                        <div className="space-y-6">
+                            <p className="text-3xl text-secondary font-light tracking-tight">
+                                From vision to reality
+                            </p>
 
-                        <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto">
-                            From vision to reality: Building Sri Lanka's digital future.
-                        </p>
-
+                        </div>
                     </motion.div>
 
                     {/* Story Content */}
@@ -34,7 +36,7 @@ function CompanyStory() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
-                        className="space-y-8 mb-16"
+                        className="space-y-8 mb-16 text-center"
                     >
                         <p className="text-xl text-gray-600 font-light">
                             BrandMe Digital was founded in 2023 with a clear vision: to revolutionize digital marketing in Sri Lanka. We understood that businesses needed more than just generic solutions – they needed a partner who could truly transform their digital presence.

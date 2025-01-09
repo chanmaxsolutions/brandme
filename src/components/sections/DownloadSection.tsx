@@ -195,7 +195,7 @@ const DownloadSection: React.FC = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1, duration: 0.1 }}
                             onClick={() => setIsModalOpen(true)}
-                            className="bg-primary text-secondary px-8 py-3 rounded-full hover:bg-primary/90 transition-all duration-300 flex items-center gap-2 text-xl mx-auto"
+                            className="bg-primary text-secondary px-12 py-4 text-xl rounded-full hover:bg-primary/90 transition-all duration-300 flex items-center gap-2 mx-auto"
                         >
                             Download Free Checklist
                         </motion.button>
