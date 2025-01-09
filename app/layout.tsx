@@ -42,9 +42,9 @@ const jsonLd = {
     }
   },
   "sameAs": [
-    "https://www.facebook.com/brandme",
-    "https://www.instagram.com/brandme",
-    "https://www.linkedin.com/company/brandme"
+    "https://www.facebook.com/brandme.top/",
+    "https://www.instagram.com/brandme.top/",
+    "https://www.linkedin.com/company/brandme-top/"
   ],
   "services": [
     "Social Media Marketing",
@@ -109,6 +109,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+
+        <noscript>
+          <link
+            href="https://api.fontshare.com/v2/css?f[]=general-sans@200,300,400,500,600,700&display=swap"
+            rel="stylesheet"
+          />
+        </noscript>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
