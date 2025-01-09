@@ -1,5 +1,3 @@
-// src/app/get-quote/page.tsx
-'use client';
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';

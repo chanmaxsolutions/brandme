@@ -1,5 +1,3 @@
-// src/app/about/page.tsx
-'use client';
 
 import React from 'react';
 import PageHeader from '@/components/PageHeader';

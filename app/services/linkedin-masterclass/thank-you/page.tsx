@@ -1,5 +1,3 @@
-// src/app/services/linkedin-masterclass/thank-you/page.tsx
-'use client';
 
 import React from 'react';
 import { motion } from 'framer-motion';
