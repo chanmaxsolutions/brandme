@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import { defaultMetadata } from './metadata';
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   ...defaultMetadata,
@@ -115,7 +116,10 @@ export default function RootLayout({
       </head>
       <body className="font-sans bg-light text-dark" suppressHydrationWarning>
         <Navigation />
-        <main>{children}</main>
+        <main>
+          {children}
+          <Analytics />
+        </main>
         <Footer />
       </body>
     </html>
