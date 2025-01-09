@@ -49,13 +49,14 @@ const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose }) => {
                 throw new Error(result.error || 'Failed to submit form');
             }
 
-            // Download the file
             const link = document.createElement('a');
             link.href = 'https://res.cloudinary.com/db8phlsfy/image/upload/v1736416910/Social_Media_Marketing_Guide_-_Brandme_wseadd.pdf';
             link.download = 'Social_Media_Marketing_Guide_-_Brandme_wseadd.pdf';
+            link.target = '_blank';  // This makes the link open in a new tab
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
+
 
 
             onClose();
